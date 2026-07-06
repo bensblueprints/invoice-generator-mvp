@@ -1,0 +1,9 @@
+node_modules/
+dist/
+release/
+data/
+test/out/
+.env
+*.log
+el-out.txt
+el-err.txt

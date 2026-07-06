@@ -1,0 +1,15 @@
+services:
+  invoice-generator:
+    build: .
+    ports:
+      - "5303:5303"
+    environment:
+      - PORT=5303
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-changeme}
+      - PUBLIC_BASE_URL=${PUBLIC_BASE_URL:-}
+    volumes:
+      - invoice_data:/data
+    restart: unless-stopped
+
+volumes:
+  invoice_data:

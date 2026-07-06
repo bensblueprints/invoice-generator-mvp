@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0a0a0f;
+  --color-panel: #12121a;
+  --color-panel2: #1a1a26;
+  --color-edge: #262636;
+  --color-accent: #6366f1;
+  --color-accent2: #818cf8;
+}
+
+body {
+  @apply bg-surface text-zinc-200 antialiased;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+::selection { background: #6366f155; }
+
+input, select, textarea {
+  @apply bg-panel2 border border-edge rounded-lg px-3 py-2 text-sm text-zinc-100
+    outline-none focus:border-accent transition-colors placeholder:text-zinc-600 w-full;
+}
+
+.btn-primary, .btn-ghost, .btn-danger {
+  @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium
+    transition-all cursor-pointer select-none disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-primary { @apply bg-accent hover:bg-accent2 text-white shadow-lg shadow-indigo-950/40; }
+.btn-ghost { @apply bg-panel2 hover:bg-edge text-zinc-300 border border-edge; }
+.btn-danger { @apply bg-red-950/60 hover:bg-red-900/60 text-red-300 border border-red-900/50; }
+
+.card { @apply bg-panel border border-edge rounded-2xl; }
+.label { @apply block text-xs font-medium text-zinc-500 uppercase tracking-wider mb-1.5; }
