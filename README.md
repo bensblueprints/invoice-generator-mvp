@@ -1,5 +1,9 @@
 # 🧾 Invoice Generator
 
+## Demo
+
+VIDEO-PLACEHOLDER
+
 ![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
 
 **Self-hosted invoicing for freelancers and small businesses. Pay once. Own it forever. No subscription.**
